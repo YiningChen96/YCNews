@@ -37,6 +37,7 @@ To test the application in development mode, follow these steps:
 For the Angular frontend:
 Navigate to the news_angular directory.
 Run the following command to start the Angular development server:
+npm install
 ng serve
 
 For the Spring Boot backend:
