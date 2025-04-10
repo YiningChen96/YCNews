@@ -8,7 +8,7 @@ Backend: Spring Boot
 
 Database: MySQL
 
-Static File Storage: External directory (C:/Users/frank/Desktop/NewsWebsite/news_image/images)
+Static File Storage: External directory 
 
 🌟 Key Features
 Multi-level administrator roles (Super Admin & Admin)
