@@ -1,0 +1,18 @@
+<div class="image-news-container">
+  <h2 class="section-title">Image News</h2>
+
+  <div *ngIf="imageNewsUrls.length === 0" class="no-image-news">
+    No image news found.
+  </div>
+
+  <div class="image-list">
+    <div *ngFor="let imageUrl of imageNewsUrls" class="image-item">
+      <div class="image-wrapper">
+        <img [src]="'http://localhost:8080'+imageUrl" alt="Image News" class="image-thumbnail" />
+      </div>
+      <button (click)="deleteImageNews(imageUrl)" class="delete-btn">
+        <i class="fas fa-trash-alt"></i> Delete
+      </button>
+    </div>
+  </div>
+</div>

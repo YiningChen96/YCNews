@@ -1,0 +1,74 @@
+<h2 class="section-title">Manage Articles</h2>
+
+<div class="search-container">
+  <input
+    type="text"
+    [(ngModel)]="searchKeyword"
+    (input)="filterArticles()"
+    placeholder="Search by title..."
+    title="Type to filter articles by title"
+    class="search-input"
+  />
+</div>
+
+<div class="table-container" *ngIf="pagedArticles.length > 0; else noArticles">
+  <table class="article-table">
+    <thead>
+      <tr>
+        <th>
+          <input
+            type="checkbox"
+            [checked]="isAllSelected()"
+            (change)="toggleAll($event)"
+            title="Select all articles on this page"
+          />
+        </th>
+        <th>Title</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let article of pagedArticles">
+        <td>
+          <input
+            type="checkbox"
+            [checked]="selectedArticles.has(article.id)"
+            (change)="toggleSelection(article.id)"
+            title="Select this article"
+          />
+        </td>
+        <td>{{ article.title }}</td>
+        <td>
+          <button (click)="deleteArticle(article.id)" title="Delete this article" class="action-btn delete-btn">
+            <i class="fas fa-trash-alt"></i> Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<ng-template #noArticles>
+  <p class="no-articles-message">No articles found.</p>
+</ng-template>
+
+<div class="actions">
+  <button
+    (click)="deleteSelectedArticles()"
+    [disabled]="selectedArticles.size === 0"
+    title="Delete all selected articles"
+    class="action-btn delete-selected-btn"
+  >
+    Delete Selected
+  </button>
+</div>
+
+<div class="pagination">
+  <button (click)="changePage(currentPage - 1)" [disabled]="currentPage === 1" class="pagination-btn">
+    Prev
+  </button>
+  <span class="pagination-info">Page {{ currentPage }} of {{ totalPages }}</span>
+  <button (click)="changePage(currentPage + 1)" [disabled]="currentPage === totalPages" class="pagination-btn">
+    Next
+  </button>
+</div>

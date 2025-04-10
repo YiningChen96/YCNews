@@ -1,0 +1,22 @@
+.background {
+  display: flex;          /* 让图片横向排列 */
+  flex-wrap: nowrap;      /* 禁止换行 */
+  gap: 1px;              /* 图片之间的间距 */
+  list-style: none;       /* 去掉默认的 <ul> 样式 */
+  padding: 0;
+  margin: 0;
+  justify-content: space-between; /* 均匀分布图片 */
+  width: 100%;            /* 容器宽度 100% */
+}
+
+.background li {
+  flex: 1 1 auto;         /* 每个图片可以灵活扩展，占满空间 */
+  height: 200px;          /* 固定高度 */
+}
+
+.background img {
+  width: 100%;            /* 让图片宽度占满 <li> */
+  height: 100%;           /* 固定图片高度为 100% */
+  border-radius: 10px;    /* 圆角效果，可选 */
+  object-fit: cover;      /* 让图片填充但不变形 */
+}

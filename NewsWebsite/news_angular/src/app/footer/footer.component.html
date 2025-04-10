@@ -1,0 +1,11 @@
+<footer class="footer">
+  <div class="copyright">
+    <p>&copy; 2025 Yining Chen (YC). All rights reserved.</p>
+  </div>
+  <ul>
+    <li *ngFor="let item of footerItems">
+      <!--<a [routerLink]="[item.link]">{{ item.label }}</a>-->
+      <a [href]="item.link" target="_blank">{{ item.label }}</a>
+    </li>
+  </ul>
+</footer>

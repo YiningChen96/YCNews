@@ -1,0 +1,31 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.news-section {
+  display: flex;
+  width: 100%;
+  margin-top: 20px; /* 可以调节上下间距 */
+}
+
+.left-section {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* 左侧部分占据整个高度 */
+}
+
+.image-news-container {
+  flex: 1; /* 图片新闻占据左侧的顶部 */
+  margin-bottom: 10px; /* 图片新闻和广告之间的间距 */
+}
+
+.advertisement-container {
+  flex: 1; /* 广告区域占据左侧剩余空间 */
+}
+
+.news-list-container {
+  flex: 1; /* 右侧部分，占据一半 */
+  margin-left: 10px; /* 左侧与右侧的间距 */
+}

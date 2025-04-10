@@ -1,0 +1,45 @@
+/* 调整登录容器 */
+.login-container {
+  max-width: 500px;  /* 增加容器宽度 */
+  min-height: 400px;  /* 增加最小高度，确保容器有足够的空间 */
+  margin: 0 auto;
+  padding: 30px;  /* 增加内边距，让内容更宽松 */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+/* 表格样式 */
+table {
+  width: 100%;
+  margin-top: 20px;  /* 增加表格顶部的间距 */
+}
+
+/* 表格单元格样式 */
+td {
+  padding: 15px;  /* 增加单元格内边距，使得每个单元格更宽松 */
+}
+
+/* 按钮样式 */
+button {
+  width: 100%;
+  padding: 12px;  /* 增加按钮内边距 */
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;  /* 调整按钮字体大小 */
+}
+
+/* 禁用按钮样式 */
+button:disabled {
+  background-color: #ccc;
+}
+
+/* 错误信息样式 */
+.error-message {
+  color: red;
+  text-align: center;
+  margin-top: 15px;
+}

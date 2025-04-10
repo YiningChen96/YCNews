@@ -1,0 +1,20 @@
+<nav class="navbar">
+  <a [routerLink]="['/home']">
+    <header class="brand-name">
+      <img class="brand-logo" *ngIf="logoUrl" [src]="logoUrl" alt="logo" />
+    </header>
+  </a>
+
+  <!-- 汉堡菜单按钮 -->
+  <div class="hamburger" (click)="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <ul class="nav-links" [class.active]="menuOpen">
+    <li *ngFor="let item of navItems">
+      <a [routerLink]="[item.link]">{{ item.label }}</a>
+    </li>
+  </ul>
+</nav>

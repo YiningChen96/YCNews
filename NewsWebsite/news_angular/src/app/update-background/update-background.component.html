@@ -1,0 +1,27 @@
+<h2>Background Image Management</h2>
+
+<!-- Image Thumbnails -->
+<div class="image-row">
+  <div
+    *ngFor="let image of backgroundImages"
+    class="thumbnail"
+    [class.selected]="image === selectedImage"
+    (click)="selectImage(image)"
+  >
+    <img [src]="image" alt="Background Thumbnail" />
+  </div>
+</div>
+
+<!-- Delete Button -->
+<div *ngIf="selectedImage" class="actions">
+  <button class="btn delete" (click)="deleteSelectedImage()">🗑 Delete Selected Image</button>
+</div>
+
+<hr />
+
+<!-- Upload Section -->
+<div class="upload-section">
+  <h3>Upload New Background Image</h3>
+  <input type="file" (change)="onFileSelected($event)" class="file-input" />
+  <button class="btn upload" (click)="uploadImage()" [disabled]="!uploadFile">⬆ Upload</button>
+</div>

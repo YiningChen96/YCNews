@@ -1,0 +1,64 @@
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  border-left: 5px solid #1976d2;
+  padding-left: 10px;
+  color: #333;
+}
+
+.image-row {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  padding: 10px 0;
+  margin-bottom: 15px;
+}
+
+.thumbnail {
+  border: 3px solid transparent;
+  cursor: pointer;
+  transition: border-color 0.2s;
+  border-radius: 8px;
+}
+
+.thumbnail.selected {
+  border-color: #e53935;
+}
+
+.thumbnail img {
+  height: 100px;
+  width: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.actions {
+  margin: 10px 0;
+}
+
+.btn {
+  padding: 8px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn.delete {
+  background-color: #e53935;
+  color: white;
+}
+
+.btn.upload {
+  background-color: #43a047;
+  color: white;
+  margin-top: 10px;
+}
+
+.upload-section {
+  margin-top: 30px;
+}
+
+.file-input {
+  margin-top: 10px;
+}

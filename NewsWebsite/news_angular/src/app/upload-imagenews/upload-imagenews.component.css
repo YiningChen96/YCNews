@@ -1,0 +1,168 @@
+/* General Layout */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f7fa;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Search Bar */
+.search-bar {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.search-input {
+  width: 300px;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 2px 5px rgba(0, 123, 255, 0.2);
+}
+
+/* Articles List */
+.articles-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.articles-list {
+  width: 48%;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.article-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.radio-btn {
+  margin-right: 10px;
+  transform: scale(1.2);
+}
+
+.article-title {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.article-item:hover {
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination-btn {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pagination-btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.pagination-btn:hover {
+  background-color: #0056b3;
+}
+
+.pagination-info {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 0 15px;
+}
+
+/* Image Preview */
+.image-preview {
+  width: 48%;
+  padding-left: 20px;
+}
+
+.image-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.image-item {
+  text-align: center;
+  cursor: pointer;
+}
+
+.image-thumbnail {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.image-thumbnail:hover {
+  transform: scale(1.05);
+}
+
+.image-name {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.selected-image-container {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.selected-image {
+  max-width: 100%;
+  max-height: 300px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.set-image-btn {
+  background-color: #28a745;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.set-image-btn:hover {
+  background-color: #218838;
+}

@@ -1,0 +1,106 @@
+/* 让导航栏固定在页面顶部 */
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background-color: rgb(101, 190, 198);
+  color: #1f2d3d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo 区域 */
+.brand-name {
+  display: flex;
+  align-items: center;
+}
+
+.brand-logo {
+  height: 50px;
+  width: auto;
+}
+
+/* 导航菜单 */
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+/* 导航项 */
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 14px;  /* 字体大小保持不变 */
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  transition: color 0.3s ease-in-out;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 1px; /* 可以减少 padding */
+  margin: 1px; /* 缩小左右的间距 */
+}
+
+
+
+
+/* 悬停效果 */
+.nav-links a:hover {
+  color: #f39c12; /* 橙色高亮 */
+}
+
+/* 响应式设计：小屏幕隐藏菜单，显示汉堡菜单 */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* 默认隐藏 */
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #222;
+    width: 200px;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  .nav-links.active {
+    display: flex; /* 点击汉堡菜单时显示 */
+  }
+
+  .nav-links li {
+    padding: 10px;
+    width: 100%;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+/* 汉堡菜单按钮 */
+.hamburger {
+  display: none; /* 默认隐藏 */
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+}

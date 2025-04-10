@@ -1,0 +1,27 @@
+<div class="home-container">
+  <!-- Background Component -->
+  <app-background></app-background>
+
+  <!-- News Section (Left: Image News, Advertisement, Right: News List) -->
+  <div class="news-section">
+    <div class="left-section">
+      <!-- Image News Component -->
+      <div class="image-news-container">
+        <app-image-news></app-image-news>
+      </div>
+      
+      <!-- Advertisement Section (Multiple ads) -->
+      <div class="advertisement-container">
+        <!-- 使用 *ngFor 来复用广告组件 -->
+        <div *ngFor="let ad of advertisements" class="advertisement-item">
+          <app-advertisement></app-advertisement>
+        </div>
+      </div>
+    </div>
+
+    <!-- News List Section (Right) -->
+    <div class="news-list-container">
+      <app-news-list></app-news-list>
+    </div>
+  </div>
+</div>

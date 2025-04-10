@@ -1,0 +1,28 @@
+<div class="news-list-container">
+  <div class="search-bar">
+    <input
+      type="text"
+      [(ngModel)]="searchKeyword"
+      (input)="applyFilterAndPagination()"
+      placeholder="Search article title..."
+      title="Enter keyword to search articles"
+    />
+  </div>
+
+  <div class="article-list">
+    <div
+      class="article-item"
+      *ngFor="let article of displayedArticles"
+      (click)="goToDetail(article.id)"
+      title="Click to view detail"
+    >
+      {{ article.title }}
+    </div>
+  </div>
+
+  <div class="pagination-controls">
+    <button (click)="changePage(currentPage - 1)" [disabled]="currentPage === 1">Prev</button>
+    <span>Page {{ currentPage }} of {{ totalPages }}</span>
+    <button (click)="changePage(currentPage + 1)" [disabled]="currentPage === totalPages">Next</button>
+  </div>
+</div>

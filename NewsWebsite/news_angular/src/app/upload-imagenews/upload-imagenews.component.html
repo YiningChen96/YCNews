@@ -1,0 +1,73 @@
+<div class="container">
+  <div class="search-bar">
+    <input
+      type="text"
+      [(ngModel)]="searchKeyword"
+      (input)="searchArticles()"
+      placeholder="Search articles"
+      title="Search articles"
+      class="search-input"
+    />
+  </div>
+
+  <div class="articles-container">
+    <div class="articles-list">
+      <h3 class="section-title">Articles</h3>
+      <div *ngFor="let article of displayedArticles" class="article-item">
+        <input
+          type="radio"
+          name="article"
+          [value]="article.id"
+          (change)="selectArticle(article.id)"
+          title="Select article"
+          class="radio-btn"
+        />
+        <span class="article-title">{{ article.title }}</span>
+      </div>
+
+      <div class="pagination">
+        <button
+          (click)="changePage(-1)"
+          [disabled]="currentPage === 1"
+          class="pagination-btn"
+        >
+          Previous
+        </button>
+        <span class="pagination-info">Page {{ currentPage }} of {{ totalPages }}</span>
+        <button
+          (click)="changePage(1)"
+          [disabled]="currentPage === totalPages"
+          class="pagination-btn"
+        >
+          Next
+        </button>
+      </div>
+    </div>
+
+    <div class="image-preview">
+      <h3 class="section-title">Selected Article Images</h3>
+      <div *ngIf="selectedArticleId" class="image-list">
+        <!-- Displaying image thumbnails -->
+        <div *ngFor="let image of articleImages" class="image-item">
+          <img
+            [src]="'http://localhost:8080' + image.url"
+            alt="Image preview"
+            (click)="selectImage(image)"
+            title="Click to select this image"
+            class="image-thumbnail"
+          />
+          <span class="image-name">{{ image.name }}</span>
+          <!-- Only show the button if the image is selected -->
+          <button
+            *ngIf="image === selectedImage"
+            (click)="setAsImageNews(image.id)"
+            title="Set as image news"
+            class="set-image-btn"
+          >
+            Set as Image News
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

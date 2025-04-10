@@ -1,0 +1,17 @@
+<div class="login-container">
+    <h2>Welcome, Admin</h2>
+  
+    <!-- 显示 4 个功能按钮 -->
+    <div class="button-container">
+      <button class="feature-button" (click)="navigateTo('upload_articles')">Upload Articles</button>
+      <button class="feature-button" (click)="navigateTo('delete_articles')">Delete Articles</button>
+      <button class="feature-button" (click)="navigateTo('upload_imagenews')">Upload Image-News</button>
+      <button class="feature-button" (click)="navigateTo('delete_imagenews')">Delete Image-News</button>
+      <button class="feature-button" (click)="navigateTo('background')">Background</button>
+      <button class="feature-button" (click)="navigateTo('logo')">Logo</button>
+  
+      <!-- 如果是超级管理员，显示 Account 按钮 -->
+      <button *ngIf="showAccountFeature" class="feature-button" (click)="navigateTo('account')">Account</button>
+    </div>
+  </div>
+  

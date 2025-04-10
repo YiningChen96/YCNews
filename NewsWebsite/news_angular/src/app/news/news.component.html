@@ -1,0 +1,15 @@
+<div *ngIf="record">
+  <!-- 标题 -->
+  <h1>{{ record.title }}</h1>
+
+  <!-- 图片展示 -->
+  <div *ngIf="images.length > 0" class="image-container">
+    <img *ngFor="let imgSrc of images" [src]="imgSrc" alt="image" class="record-image">
+  </div>
+
+  <!-- 文章内容 -->
+  <p class="content">{{ record.content }}</p>
+</div>
+
+<!-- 如果文章未加载 -->
+<p *ngIf="!record">加载中...</p>

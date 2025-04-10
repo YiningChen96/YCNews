@@ -1,0 +1,14 @@
+<div class="image-news-container">
+    <div class="image-slide">
+      <img 
+        *ngIf="imageUrls.length > 0" 
+        [src]="imageUrls[currentIndex]" 
+        (click)="goToNews(imageUrls[currentIndex])"
+        alt="News Image">
+        <div class="title" *ngIf="imageUrls[currentIndex]">
+            {{ titles[extractIdFromUrl(imageUrls[currentIndex])] || 'Loading...' }}
+        </div>
+          
+    </div>
+  </div>
+  

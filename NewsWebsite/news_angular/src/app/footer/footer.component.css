@@ -1,0 +1,41 @@
+.footer {
+    background-color: rgb(101, 190, 198);
+    color: #1f2d3d;
+    text-align: center;
+    padding: 12px;
+  }
+  
+  .footer ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer li {
+    display: inline;
+    margin: 0 15px;
+  }
+  
+  .footer a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 14px;  /* 字体大小保持不变 */
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+    transition: color 0.3s ease-in-out;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 1px; /* 可以减少 padding */
+    margin: 1px; /* 缩小左右的间距 */
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  
+  .copyright {
+    margin-top: 10px;
+    font-size: 14px;
+    color: black;
+  }
+  

@@ -1,0 +1,17 @@
+<div class="logo-container">
+    <h2>Website Logo Management</h2>
+  
+    <div *ngIf="logoUrl; else noLogo" class="logo-preview">
+      <img [src]="logoUrl" alt="Current Logo" />
+    </div>
+  
+    <ng-template #noLogo>
+      <p class="no-logo">No logo currently set.</p>
+    </ng-template>
+  
+    <div class="upload-section">
+      <input type="file" (change)="onFileSelected($event)" />
+      <button class="btn upload" [disabled]="!selectedFile" (click)="uploadLogo()">Upload & Replace</button>
+    </div>
+  </div>
+  
